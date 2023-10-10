@@ -16,6 +16,7 @@ This document describes how to back up and restore your TiDB Dedicated cluster d
 
 - TiDB Cloud does not support restoring tables in the `mysql` schema, including user permissions and system variables.
 - If you turn on and off Point-in-time Restore multiple times, you can only choose a time point within the recoverable range after the most recent Point-in-time Restore is enabled. The earlier recoverable range is not accessible.
+- Do modify the switch of **Point-in-time Restore** and **Dual Region Backup** at the same time.
 
 ## Backup
 
@@ -68,8 +69,7 @@ In the **Backup Settings** window, you can turn on the feature with the followin
 
 > **Warning**
 >
-> - Point-in-Time Restore only takes effect after the next backup task is completed. To make it take effect earlier, you can [manually perform a backup](#perform-manual-backups) after enabling it.
-> -DO NOT modify the switch of **Point-in-time Restore** and **Dual Region Backup** at the same time.
+> Point-in-Time Restore only takes effect after the next backup task is completed. To make it take effect earlier, you can [manually perform a backup](#perform-manual-backups) after enabling it.
 
 To turn off the feature, toggle the **Point-in-time Restore** switch to **Off**.
 
