@@ -102,7 +102,11 @@ To configure the backup schedule, toggle the **Auto Backup** switch to **On** an
     > - After you delete the cluster, the automatic backup files will be retained for a specified period, as set in **Backup Settings**. You need to delete the backup files accordingly.
     > - After you delete a cluster, the existing manual backup files will be retained until you manually delete them, or your account is closed.
 
-### Configure dual region backup
+### Configure dual region backup (beta)
+
+> **Note:**
+>
+> The dual region backup feature is currently in beta.
 
 TiDB Dedicated supports dual region backup by replicating backups from your cluster region to another different region. After you enable this feature, all backups are automatically replicated to the specified region. This provides cross-region data protection and disaster recovery capabilities. It is estimated that approximately 99% of the data can be replicated to the secondary region within an hour.
 
