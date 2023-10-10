@@ -186,8 +186,8 @@ To restore your TiDB Dedicated cluster data from a backup to a new cluster, take
 
     To restore a selected backup to the new cluster, take the following steps:
 
-    1. Click **Select Backup Name**.
-    2. Select a backup you want to restore to.
+    - Click **Select Backup Name**.
+    - Select a backup you want to restore to.
 
     </div>
     </SimpleTab>
