@@ -68,7 +68,8 @@ In the **Backup Settings** window, you can turn on the feature with the followin
 
 > **Warning**
 >
-> Point-in-Time Restore only takes effect after the next backup task is completed. To make it take effect earlier, you can [manually perform a backup](#manual-backup) after enabling it.
+> - Point-in-Time Restore only takes effect after the next backup task is completed. To make it take effect earlier, you can [manually perform a backup](#perform-manual-backups) after enabling it.
+> -DO NOT modify the switch of **Point-in-time Restore** and **Dual Region Backup** at the same time.
 
 To turn off the feature, toggle the **Point-in-time Restore** switch to **Off**.
 
@@ -151,11 +152,6 @@ To delete a running backup job, it is similar as [**Delete backup files**](#dele
 
 ## Restore
 
-TiDB Dedicated provides two types of data restoration:
-
-- Restore backup data to a new cluster
-- Restore a deleted cluster from the recycle bin
-
 ### Restore data to a new cluster
 
 To restore your TiDB Dedicated cluster data from a backup to a new cluster, take the following steps:
@@ -208,6 +204,10 @@ To restore your TiDB Dedicated cluster data from a backup to a new cluster, take
 
 ### Restore a deleted cluster
 
+> **Note:**
+>
+> You cannot restore a deleted cluster to any point in time. You can only select an automatic or manual backup to restore.
+
 To restore a deleted cluster from recycle bin, take the following steps:
 
 1. Log in to the [TiDB Cloud console](https://tidbcloud.com).
@@ -224,7 +224,3 @@ To restore a deleted cluster from recycle bin, take the following steps:
     The cluster restore process starts and the **Security Settings** dialog box is displayed.
 
 7. In the **Security Settings** dialog box, set the root password and allowed IP addresses to connect to your cluster, and then click **Apply**.
-
-> **Note:**
->
-> You cannot restore a deleted cluster to any point in time. You can only select an automatic or manual backup to restore.
