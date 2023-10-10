@@ -21,7 +21,7 @@ This document describes how to back up and restore your TiDB Dedicated cluster d
 
 ### Configure automatic backup
 
-TiDB Dedicated supports both [snapshot backup](https://docs.pingcap.com/tidb/stable/br-snapshot-guide) and [log backup](https://docs.pingcap.com/tidb/stable/br-pitr-guide) (Point-in-time Restore in TiDB Dedicated). Snapshot backup enables you to restore data to a specific backup point. By default, TiDB Dedicated automatically performs snapshot backup and stores backup files according to your backup retention policy.
+TiDB Dedicated supports both [snapshot backup](https://docs.pingcap.com/tidb/stable/br-snapshot-guide) and [log backup](https://docs.pingcap.com/tidb/stable/br-pitr-guide). Snapshot backup enables you to restore data to a specific backup point. By default, TiDB Dedicated automatically performs snapshot backup and stores backup files according to your backup retention policy.
 
 To configure automatic backup, perform the following steps:
 
