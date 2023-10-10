@@ -21,13 +21,13 @@ This document describes how to back up and restore your TiDB Dedicated cluster d
 
 ### Configure automatic backup
 
-TiDB Dedicated supports both [snapshot backup](https://docs.pingcap.com/tidb/stable/br-snapshot-guide) and [log backup](https://docs.pingcap.com/tidb/stable/br-pitr-guide) (Point-in-time Restore in TiDB Dedicated). Snapshot backup enables you to restore to a specific backup point. By default, TiDB Dedicated automatically performs snapshot backup and stores the backup files according to your backup retention policy.
+TiDB Dedicated supports both [snapshot backup](https://docs.pingcap.com/tidb/stable/br-snapshot-guide) and [log backup](https://docs.pingcap.com/tidb/stable/br-pitr-guide) (Point-in-time Restore in TiDB Dedicated). Snapshot backup enables you to restore data to a specific backup point. By default, TiDB Dedicated automatically performs snapshot backup and stores backup files according to your backup retention policy.
 
 To configure automatic backup, perform the following steps:
 
 1. Navigate to the **Backup** page of a TiDB Dedicated cluster.
 
-2. Click **Backup Settings**. The setting window displays.
+2. Click **Backup Settings**. The setting window is displayed.
 
 3. In the setting window, configure the automatic backup settings as needed:
 
@@ -66,19 +66,19 @@ In the **Backup Settings** window, you can turn on the feature with the followin
 
 > **Warning**
 >
-> Point-in-Time Restore only takes effect after the next backup task completes. To enable it immediately, you need to [manually perform a backup](#manual-backup) after configuration.
+> Point-in-Time Restore only takes effect after the next backup task is completed. To make it take effect earlier, you can [manually perform a backup](#manual-backup) after enabling it.
 
 #### Set up backup scheduler
 
 TiDB Dedicated supports daily and weekly backup schedules. By default, the backup schedule is set to daily. You can choose a specific time of the day or week to start snapshot backup.
 
-To configure backup schedule, toggle the **Auto Backup** switch to **On** and set the following settings:
+To configure the backup schedule, toggle the **Auto Backup** switch to **On** and make the following settings:
 
 - In **Backup Scheduler**, select either the **Daily** or **Weekly** checkbox. If you select **Weekly**, you need to specify the days of the week for the backup.
 
     > **Warning**
     >
-    > - The Point-in-time Restore feature is enabled by default and cannot be disabled when you enable weekly backup.
+    > - When weekly backup is enabled, the Point-in-time Restore feature is enabled by default and cannot be disabled.
     > - If you change the backup scheduler from weekly to daily, the Point-in-time Restore feature remains its original setting. You can manually disable it if needed.
 
 - In **Backup Time**, schedule a start time for the daily or weekly cluster backup.
@@ -87,8 +87,8 @@ To configure backup schedule, toggle the **Auto Backup** switch to **On** and se
 
     > **Note**
     >
-    > - To minimize the impact on business, it is recommended to schedule automatic backup at a low workload period.
-    > - Backup jobs are automatically delayed when importing data jobs are in progress. **DO NOT** run the manual backup while importing data, or during cluster scaling.
+    > - To minimize the impact on business, it is recommended to schedule automatic backup during periods of low workloads.
+    > - Backup jobs are automatically delayed when data import jobs are in progress. **DO NOT** run manual backups during data import, or during cluster scaling.
 
 - In **Backup Retention**, configure the minimum backup data retention period. The default is seven days.
 
