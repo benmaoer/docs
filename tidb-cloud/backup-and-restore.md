@@ -177,8 +177,8 @@ To restore your TiDB Dedicated cluster data from a backup to a new cluster, take
 
     To restore data of any point in time within the backup retention to a new cluster, make sure that **Point-in-time Restore** in **Backup Settings** is on and then take the following steps:
 
-    1. Click **Select Time Point**.
-    2. Select **Date** and **Time** you want to restore to.
+    - Click **Select Time Point**.
+    - Select **Date** and **Time** you want to restore to.
 
     </div>
 
